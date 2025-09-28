@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap');
+
+@theme inline {
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+ 
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+}
+
+/* Background Color */
+body {
+  background-color: #0F0F11;
+  font-family: "Poppins", sans-serif;
+  color: #FFFFFF;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.section-spacing {
+  @apply min-h-screen py-5 ;
+}
+
+.about-section {
+  position: relative;
+  min-height: 100vh;
+  background: url("Tengah.png") center/cover no-repeat;
+  z-index: 0;
+}
+
+.section-divider {
+  background-image: url('Atas.png');
+  background-repeat: no-repeat;
+  background-size: cover; /* bisa juga contain */
+  background-position: center;
+}
+
+.divider-atas {
+  position: relative;
+  top: -120px; /* atur sesuai kebutuhan */
+  width: 100%;
+  height: 200px; /* atur sesuai tinggi gambar */
+  background-image: url('satu.png');
+  background-repeat: no-repeat;
+  background-size: cover; /* atau contain kalau mau full */
+  background-position: center;
+  z-index: 10;
+}
+
+.divider-bawah {
+  position: relative;
+  bottom: 0px; /* atur sesuai kebutuhan */
+  width: 100%;
+  height: 200px; /* atur sesuai tinggi gambar */
+  background-image: url('satu.png');
+  background-repeat: no-repeat;
+  background-size: cover; /* atau contain kalau mau full */
+  background-position: center;
+}
+
+.services-text {
+  color: #2355D3; /* ungu (sesuai text-purple-500 Tailwind) */
+  font-weight: 600; /* sama dengan font-semibold */
+  text-transform: uppercase;
+  letter-spacing: 0.4em; /* atur jaraknya */
+}
+
+.hover-animation {
+  @apply hover:-translate-y-1 duration-200;
+}
+
+
+.hover-animation {
+  @apply hover:-translate-y-1 duration-200;
+}
+
+/* Contact Section*/
+.field-label {
+  @apply text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70;
+}
+
+.field-input {
+  @apply w-full min-h-10 rounded-md px-3 py-2 text-sm bg-white/10 transition duration-200 placeholder-neutral-500 border border-white/10 mt-2;
+}
+
+.field-input-focus {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20;
+}
