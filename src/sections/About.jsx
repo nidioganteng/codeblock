@@ -1,17 +1,20 @@
 import { motion } from "motion/react";
+import { Particles } from "../components/Particles";
 
 const About = () => {
   return (
     <>
     <section
       id="about"
-      className="min-h-screen w-full flex items-center justify-center text-white relative -mt-57"
-      style={{
-        backgroundImage: "url('Aboutt.png')", // ganti path sesuai file kamu
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        }}
+      className="min-h-screen w-full flex items-center justify-center text-white relative -mt-20"
       > 
+        <Particles
+            className="absolute inset-0 -z-50"
+            quantity={100}
+            ease={80}
+            color={"#ffffff"}
+            refresh
+        />
 
       {/* Text */}
       <motion.div className="text-center px-4 md:px-8 sm:px-6 mb-1 lg:-mb-5"
@@ -37,7 +40,7 @@ const About = () => {
         text-4xl 
         sm:text-4xl 
         md:text-6xl 
-        lg:text-[96px] 
+        lg:text-[74px] 
         leading-snug
         '>
             What We <span className='text-[#2355D3]'>Do.</span>
@@ -222,16 +225,7 @@ const About = () => {
 
         </div>
       </motion.div>
-    </section>
-
-    <motion.div 
-    className="divider-bawah"
-    initial={{ opacity: 0, y: 30 }}          // mulai transparan + agak turun
-    whileInView={{ opacity: 1, y: 0 }}       // muncul & naik ke posisi normal
-    transition={{ duration: 0.5, ease: "easeOut" }}
-    viewport={{ once: true, amount: 0.2 }}   // animasi jalan sekali saat 20% elemen masuk viewport
-    ></motion.div>
-    
+    </section>  
     </>
 
   )

@@ -36,14 +36,6 @@ const Product = () => {
           </motion.div>
         ))}
       </section>  
-
-    <motion.div 
-    className="divider-bawah"
-    initial={{ opacity: 0, y: 30 }}          // mulai transparan + agak turun
-    whileInView={{ opacity: 1, y: 0 }}       // muncul & naik ke posisi normal
-    transition={{ duration: 0.5, ease: "easeOut" }}
-    viewport={{ once: true, amount: 0.2 }}   // animasi jalan sekali saat 20% elemen masuk viewport
-    ></motion.div>
     </>
   )
 }

@@ -10,7 +10,7 @@ const HeroText = () => {
         sm:text-[60px]
         md:text-[70px]
         lg:text-[80px]
-        xl:text-[110px]
+        xl:text-[87px]
         leading-[0.9]"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -23,7 +23,7 @@ const HeroText = () => {
         text-[9px]
         sm:text-[10px]
         md:text-[12px]
-        lg:text-[18px]
+        lg:text-[14px]
         leading-relaxed mt-6 sm:mt-8
         '
         initial={{ y: 50, opacity: 0 }}
