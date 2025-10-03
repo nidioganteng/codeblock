@@ -35,7 +35,7 @@ const ReviewCard = ({ img, name, username, body }) => {
 
 export default function Testimonial() {
   return (
-    <div className="items-start container mx-auto max-w-7xl">
+    <div className="container mx-auto max-w-7xl mt-40">
       <motion.p
         className="services-text text-[12px] sm:text-[14px] md:text-[16px] text-center"
         initial={{ opacity: 0, y: 20 }}
@@ -58,7 +58,7 @@ export default function Testimonial() {
       </motion.h2>
 
       <motion.div
-        className="relative flex w-full flex-col items-center justify-center overflow-hidden mt-12"
+        className="relative flex w-full flex-col items-center justify-center overflow-hidden mt-20"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.4 }}
