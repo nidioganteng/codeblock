@@ -47,7 +47,7 @@ const ProjectDetails = ({
               
             >
               View Project
-              <img src="arrow-up.svg" className="size-4" />
+              <img src="assets/arrow-up.svg" className="size-4" />
             </a>
           </div>
         </div>

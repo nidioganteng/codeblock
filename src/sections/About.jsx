@@ -95,7 +95,7 @@ const About = () => {
                 {/* Icon */}
                 <div className="mb-3 sm:mb-4">
                     <img
-                    src="Webdesign.png" // ganti path sesuai icon kamu
+                    src="assets/Webdesign.png" // ganti path sesuai icon kamu
                     alt="Website Design"
                     className="w-18 h-16 sm:w-22 sm:h-20 lg:w-28 lg:h-26"
                     />
@@ -133,7 +133,7 @@ const About = () => {
                 {/* Icon */}
                 <div className="mb-4">
                     <img
-                    src="Brand-Identity.png" // ganti path sesuai icon kamu
+                    src="assets/Brand-Identity.png" // ganti path sesuai icon kamu
                     alt="Brand Identity"
                     className="w-16 h-16 sm:w-20 sm:h-20 lg:w-26 lg:h-26"
                     />
@@ -170,7 +170,7 @@ const About = () => {
                 {/* Icon */}
                 <div className="mb-4">
                     <img
-                    src="UI-UX.png" // ganti path sesuai icon kamu
+                    src="assets/UI-UX.png" // ganti path sesuai icon kamu
                     alt="Ui & Ux Design"
                     className="w-16 h-16 sm:w-20 sm:h-20 lg:w-26 lg:h-26"
                     />
@@ -208,7 +208,7 @@ const About = () => {
                 {/* Icon */}
                 <div className="mb-4">
                     <img
-                    src="Landing-Page.png" // ganti path sesuai icon kamu
+                    src="assets/Landing-Page.png" // ganti path sesuai icon kamu
                     alt="Landing Pages"
                     className="w-16 h-16 sm:w-20 sm:h-20 lg:w-26 lg:h-26"
                     />

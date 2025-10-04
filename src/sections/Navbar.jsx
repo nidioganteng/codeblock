@@ -42,7 +42,7 @@ export const Navbar = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <div className="mx-auto c-space max-w-7xl">
+      <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between py-4 sm:py-0">
           {/* Logo */}
           <a href="/" className="opacity-50 hover:opacity-100">

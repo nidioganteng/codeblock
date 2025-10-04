@@ -8,7 +8,7 @@ const Hero = () => {
     <>
     <section
       id="hero"
-      className="relative flex items-center justify-center md:items-start md:justify-start min-h-screen w-full"
+      className="relative flex items-center justify-center md:items-start md:justify-start min-h-screen w-full overflow-x-hidden"
     >
       <HeroText />
       <Particles
