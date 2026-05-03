@@ -92,108 +92,6 @@ export const myProjects = [
       },
     ],
   },
-  // {
-  //   id: 4,
-  //   title: "Decentralized Medical Data Access Platform",
-  //   description:
-  //     "A blockchain-powered platform that gives patients full ownership and control of their medical records for secure, seamless sharing across healthcare providers.",
-  //   subDescription: [
-  //     "Medical Chain ID is a blockchain-based platform developed with Motoko, React, Tailwind CSS, and Vite, enabling patients to securely own and manage their medical records. It offers advanced encryption, passwordless authentication, and granular access controls, allowing seamless and secure sharing of health data across different healthcare institutions.",
-  //   ],
-  //   href: "https://medicalchainid.com/",
-  //   logo: "",
-  //   image: "assets/projects/medicalchain.png",
-  //   tags: [
-  //     {
-  //       id: 1,
-  //       name: "React",
-  //       path: "assets/logos/react.svg",
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "TailwindCSS",
-  //       path: "assets/logos/tailwindcss.svg",
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Vite",
-  //       path: "assets/logos/vitejs.svg",
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "Motoko",
-  //       path: "assets/logos/motoku.png",
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: 5,
-  //   title: "Decentralized Medical Data Access Platform",
-  //   description:
-  //     "A blockchain-powered platform that gives patients full ownership and control of their medical records for secure, seamless sharing across healthcare providers.",
-  //   subDescription: [
-  //     "Medical Chain ID is a blockchain-based platform developed with Motoko, React, Tailwind CSS, and Vite, enabling patients to securely own and manage their medical records. It offers advanced encryption, passwordless authentication, and granular access controls, allowing seamless and secure sharing of health data across different healthcare institutions.",
-  //   ],
-  //   href: "https://medicalchainid.com/",
-  //   logo: "",
-  //   image: "assets/projects/medicalchain.png",
-  //   tags: [
-  //     {
-  //       id: 1,
-  //       name: "React",
-  //       path: "assets/logos/react.svg",
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "TailwindCSS",
-  //       path: "assets/logos/tailwindcss.svg",
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Vite",
-  //       path: "assets/logos/vitejs.svg",
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "Motoko",
-  //       path: "assets/logos/motoku.png",
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: 6,
-  //   title: "Decentralized Medical Data Access Platform",
-  //   description:
-  //     "A blockchain-powered platform that gives patients full ownership and control of their medical records for secure, seamless sharing across healthcare providers.",
-  //   subDescription: [
-  //     "Medical Chain ID is a blockchain-based platform developed with Motoko, React, Tailwind CSS, and Vite, enabling patients to securely own and manage their medical records. It offers advanced encryption, passwordless authentication, and granular access controls, allowing seamless and secure sharing of health data across different healthcare institutions.",
-  //   ],
-  //   href: "https://medicalchainid.com/",
-  //   logo: "",
-  //   image: "assets/projects/medicalchain.png",
-  //   tags: [
-  //     {
-  //       id: 1,
-  //       name: "React",
-  //       path: "assets/logos/react.svg",
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "TailwindCSS",
-  //       path: "assets/logos/tailwindcss.svg",
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Vite",
-  //       path: "assets/logos/vitejs.svg",
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "Motoko",
-  //       path: "assets/logos/motoku.png",
-  //     },
-  //   ],
-  // },
 ];
 
 
@@ -218,51 +116,51 @@ export const mySocials = [
 
 export const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://robohash.org/jack",
+    name: "Andi Pratama",
+    username: "@andipratama",
+    body: "Website bisnis saya jadi jauh lebih profesional. Desainnya modern dan responsif di semua perangkat. Tim Codeblock sangat responsif dan hasilnya melebihi ekspektasi!",
+    img: "https://robohash.org/andipratama",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://robohash.org/jill",
+    name: "Sari Dewi",
+    username: "@saridewi",
+    body: "Saya minta dibuatkan landing page untuk produk skincare saya. Hasilnya keren banget, conversion rate naik signifikan sejak pakai landing page baru ini.",
+    img: "https://robohash.org/saridewi",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://robohash.org/john",
+    name: "Reza Mahardika",
+    username: "@rezamahardika",
+    body: "Brand identity yang dibuat Codeblock benar-benar mencerminkan visi bisnis saya. Logo, warna, dan guidelines-nya sangat konsisten dan profesional.",
+    img: "https://robohash.org/rezamahardika",
   },
   {
-    name: "Alice",
-    username: "@alice",
-    body: "This is hands down the best thing I've experienced. Highly recommend!",
-    img: "https://robohash.org/alice",
+    name: "Nadia Kusuma",
+    username: "@nadiakusuma",
+    body: "Proses kerja sama sangat smooth. Revisi ditanggapi cepat dan hasilnya selalu on point. Puas banget dengan UI/UX yang dihasilkan, user saya suka sekali.",
+    img: "https://robohash.org/nadiakusuma",
   },
   {
-    name: "Bob",
-    username: "@bob",
-    body: "Incredible work! The attention to detail is phenomenal.",
-    img: "https://robohash.org/bob",
+    name: "Bagas Wicaksono",
+    username: "@bagaswicaksono",
+    body: "Paket Standard-nya worth it banget. Dapat website startup yang lengkap dengan animasi halus dan tampilan yang clean. Recommended!",
+    img: "https://robohash.org/bagaswicaksono",
   },
   {
-    name: "Charlie",
-    username: "@charlie",
-    body: "This exceeded all my expectations. Absolutely stunning!",
-    img: "https://robohash.org/charlie",
+    name: "Putri Amaliya",
+    username: "@putriamaliya",
+    body: "Codeblock bantu bikin portfolio website saya dari nol. Hasilnya elegan dan loading-nya cepat. Banyak klien yang memuji tampilan website saya sekarang.",
+    img: "https://robohash.org/putriamaliya",
   },
   {
-    name: "Dave",
-    username: "@dave",
-    body: "Simply breathtaking. The best decision I've made in a while.",
-    img: "https://robohash.org/dave",
+    name: "Dimas Ariyanto",
+    username: "@dimasariyanto",
+    body: "Komunikasinya enak, timnya ngerti kebutuhan bisnis saya tanpa perlu banyak dijelaskan. Hasil akhirnya rapi, desain dan kodenya bersih.",
+    img: "https://robohash.org/dimasariyanto",
   },
   {
-    name: "Eve",
-    username: "@eve",
-    body: "So glad I found this. It has changed the game for me.",
-    img: "https://robohash.org/eve",
+    name: "Lestari Handayani",
+    username: "@lestarihandayani",
+    body: "Sudah 3 bulan pakai website dari Codeblock, performa stabil dan maintenance-nya terjangkau. Kalau ada masalah langsung direspons. Top!",
+    img: "https://robohash.org/lestarihandayani",
   },
 ];
