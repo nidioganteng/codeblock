@@ -1,39 +1,36 @@
-import { useState } from "react";
-import emailjs from "@emailjs/browser";
-import Alert from "../components/Alert";
-import { Particles } from "../components/Particles";
-import { motion } from "framer-motion";
+import { useState } from "react"
+import emailjs from "@emailjs/browser"
+import Alert from "../components/Alert"
+import { Particles } from "../components/Particles"
+import { motion } from "motion/react"
+import { useLang } from "../lang/LangContext"
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [isLoading, setIsLoading] = useState(false);
-  const [showAlert, setShowAlert] = useState(false);
-  const [alertType, setAlertType] = useState("success");
-  const [alertMessage, setAlertMessage] = useState("");
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-  const showAlertMessage = (type, message) => {
-    setAlertType(type);
-    setAlertMessage(message);
-    setShowAlert(true);
-    setTimeout(() => {
-      setShowAlert(false);
-    }, 5000);
-  };
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
+  const { t } = useLang()
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" })
+  const [isLoading, setIsLoading] = useState(false)
+  const [showAlert, setShowAlert] = useState(false)
+  const [alertType, setAlertType] = useState("success")
+  const [alertMessage, setAlertMessage] = useState("")
 
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+
+  const showAlertMessage = (type, message) => {
+    setAlertType(type)
+    setAlertMessage(message)
+    setShowAlert(true)
+    setTimeout(() => setShowAlert(false), 5000)
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsLoading(true)
     try {
-      console.log("From submitted:", formData);
       await emailjs.send(
-        "service_vwjmxyp",
-        "template_sx8h31f",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: formData.name,
           to_name: "codeblock",
@@ -41,19 +38,19 @@ const Contact = () => {
           to_email: "codeblock.id@gmail.com",
           message: formData.message,
         },
-        "GCzbR8W7O73X5CGc5"
-      );
-      setIsLoading(false);
-      setFormData({ name: "", email: "", message: "" });
-      showAlertMessage("success", "You message has been sent!");
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      setIsLoading(false)
+      setFormData({ name: "", email: "", message: "" })
+      showAlertMessage("success", t.contact.successMessage)
     } catch (error) {
-      setIsLoading(false);
-      console.log(error);
-      showAlertMessage("danger", "Somthing went wrong!");
+      setIsLoading(false)
+      showAlertMessage("danger", t.contact.errorMessage)
     }
-  };
+  }
+
   return (
-    <section id='contact' className="relative flex items-center min-h-screen py-20 md:mt-30">
+    <section id="contact" className="relative flex items-center min-h-screen py-20 md:mt-30">
       <Particles
         className="absolute inset-0 -z-50"
         quantity={100}
@@ -77,10 +74,8 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold">Contact Us</h2>
-          <p className="font-normal text-neutral-400">
-            Whether you're looking to build a new website, improve your existing platform, or just want to say hello, feel free to reach out.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold">{t.contact.title}</h2>
+          <p className="font-normal text-neutral-400">{t.contact.description}</p>
         </motion.div>
 
         <motion.form
@@ -92,15 +87,13 @@ const Contact = () => {
           viewport={{ once: true }}
         >
           <div className="mb-5">
-            <label htmlFor="name" className="feild-label">
-              Full Name
-            </label>
+            <label htmlFor="name" className="field-label">{t.contact.name}</label>
             <input
               id="name"
               name="name"
               type="text"
               className="field-input field-input-focus"
-              placeholder="Your Name"
+              placeholder={t.contact.namePlaceholder}
               autoComplete="name"
               value={formData.name}
               onChange={handleChange}
@@ -108,15 +101,13 @@ const Contact = () => {
             />
           </div>
           <div className="mb-5">
-            <label htmlFor="email" className="feild-label">
-              Email
-            </label>
+            <label htmlFor="email" className="field-label">{t.contact.email}</label>
             <input
               id="email"
               name="email"
               type="email"
               className="field-input field-input-focus"
-              placeholder="Your email address"
+              placeholder={t.contact.emailPlaceholder}
               autoComplete="email"
               value={formData.email}
               onChange={handleChange}
@@ -124,17 +115,14 @@ const Contact = () => {
             />
           </div>
           <div className="mb-5">
-            <label htmlFor="message" className="feild-label">
-              Message
-            </label>
+            <label htmlFor="message" className="field-label">{t.contact.message}</label>
             <textarea
               id="message"
               name="message"
-              type="text"
               rows="4"
               className="field-input field-input-focus"
-              placeholder="Share your thoughts..."
-              autoComplete="message"
+              placeholder={t.contact.messagePlaceholder}
+              autoComplete="off"
               value={formData.message}
               onChange={handleChange}
               required
@@ -144,12 +132,12 @@ const Contact = () => {
             type="submit"
             className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-[#2355D3] hover-animation"
           >
-            {!isLoading ? "Send" : "Sending..."}
+            {!isLoading ? t.contact.send : t.contact.sending}
           </button>
         </motion.form>
       </motion.div>
     </section>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact
