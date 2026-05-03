@@ -1,10 +1,11 @@
-import { twMerge } from "tailwind-merge";
-import { Marquee } from "../components/Marquee";
-import { reviews } from "../constants";
-import { motion } from "framer-motion";
+import { twMerge } from "tailwind-merge"
+import { Marquee } from "../components/Marquee"
+import { reviews } from "../constants"
+import { motion } from "motion/react"
+import { useLang } from "../lang/LangContext"
 
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
+const firstRow = reviews.slice(0, reviews.length / 2)
+const secondRow = reviews.slice(reviews.length / 2)
 
 const ReviewCard = ({ img, name, username, body }) => {
   return (
@@ -14,26 +15,20 @@ const ReviewCard = ({ img, name, username, body }) => {
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img
-          className="rounded-full bg-white/30"
-          width="32"
-          height="32"
-          alt=""
-          src={img}
-        />
+        <img className="rounded-full bg-white/30" width="32" height="32" alt="" src={img} />
         <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
-            {name}
-          </figcaption>
+          <figcaption className="text-sm font-medium dark:text-white">{name}</figcaption>
           <p className="text-xs font-medium text-white/40">{username}</p>
         </div>
       </div>
       <blockquote className="mt-2 text-sm">{body}</blockquote>
     </figure>
-  );
-};
+  )
+}
 
 export default function Testimonial() {
+  const { t } = useLang()
+
   return (
     <div className="container mx-auto max-w-7xl mt-40">
       <motion.p
@@ -43,7 +38,7 @@ export default function Testimonial() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        Testimonial
+        {t.testimonial.label}
       </motion.p>
 
       <motion.h2
@@ -53,8 +48,8 @@ export default function Testimonial() {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Review From Our{" "}
-        <span className="text-[#2355D3]">Clients</span>
+        {t.testimonial.title}{" "}
+        <span className="text-[#2355D3]">{t.testimonial.titleAccent}</span>
       </motion.h2>
 
       <motion.div
@@ -96,5 +91,5 @@ export default function Testimonial() {
         <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#0F0F11]" />
       </motion.div>
     </div>
-  );
+  )
 }

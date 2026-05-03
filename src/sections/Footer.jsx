@@ -1,7 +1,10 @@
-import { mySocials } from "../constants";
-import { motion } from "framer-motion";
+import { mySocials } from "../constants"
+import { motion } from "motion/react"
+import { useLang } from "../lang/LangContext"
 
 const Footer = () => {
+  const { t } = useLang()
+
   return (
     <motion.section
       className="flex flex-wrap items-center justify-between gap-5 pb-10 text-sm text-neutral-400 container mx-auto max-w-7xl"
@@ -25,9 +28,9 @@ const Footer = () => {
         transition={{ duration: 0.6, delay: 0.3 }}
         viewport={{ once: true }}
       >
-        <p>Terms & Conditions</p>
+        <p>{t.footer.terms}</p>
         <p>|</p>
-        <p>Privacy Policy</p>
+        <p>{t.footer.privacy}</p>
       </motion.div>
 
       <motion.div
@@ -55,10 +58,10 @@ const Footer = () => {
         transition={{ duration: 0.6, delay: 0.5 }}
         viewport={{ once: true }}
       >
-        © 2025 codeblock. All rights reserved.
+        {t.footer.copyright}
       </motion.p>
     </motion.section>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

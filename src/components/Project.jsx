@@ -1,20 +1,14 @@
-import React, { useState } from "react";
-import ProjectDetails from "../components/ProjectDetail";
+import { useState } from "react"
+import ProjectDetails from "../components/ProjectDetail"
+import { useLang } from "../lang/LangContext"
 
-const Project = ({
-  title,
-  description,
-  subDescription,
-  href,
-  image,
-  tags,
-}) => {
-  const [isHidden, setIsHidden] = useState(false);
+const Project = ({ title, description, subDescription, href, image, tags }) => {
+  const [isHidden, setIsHidden] = useState(false)
+  const { t } = useLang()
+
   return (
     <>
-      <div
-        className="flex-wrap items-center justify-between py-10 space-y-14 sm:flex sm:space-y-0 max-w-7xl"
-      >
+      <div className="flex-wrap items-center justify-between py-10 space-y-14 sm:flex sm:space-y-0 max-w-7xl">
         <div>
           <p className="text-2xl">{title}</p>
           <div className="flex gap-5 mt-2 text-amber-500">
@@ -23,11 +17,8 @@ const Project = ({
             ))}
           </div>
         </div>
-        <button
-          onClick={() => setIsHidden(true)}
-          className="flex items-center gap-1 hover-animation"
-        >
-          Read More
+        <button onClick={() => setIsHidden(true)} className="flex items-center gap-1 hover-animation">
+          {t.product.readMore}
           <img src="assets/arrow-right.svg" className="w-5" />
         </button>
       </div>
@@ -44,7 +35,7 @@ const Project = ({
         />
       )}
     </>
-  );
-};
+  )
+}
 
-export default Project;
+export default Project
